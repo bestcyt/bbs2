@@ -11,7 +11,6 @@ class PagesController extends Controller
     public function root()
     {
         $test = User::where('id',1)->first()->toArray();
-        dd($test);
         return view('pages.root');
     }
 
