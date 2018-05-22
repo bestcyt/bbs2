@@ -6,6 +6,7 @@ use App\Models\Topic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
+use Illuminate\Support\Facades\DB;
 
 class TopicsController extends Controller
 {
@@ -16,8 +17,13 @@ class TopicsController extends Controller
 
 	public function index(Request $request,Topic $topic)
 	{
+	    DB::connection()->enableQueryLog();
 		$topics = $topic->withOrder($request->order)->paginate(30);
-		return view('topics.index', compact('topics'));
+        $sql=DB::getQueryLog();
+
+        dd($sql);
+
+        return view('topics.index', compact('topics'));
 	}
 
     public function show(Topic $topic)
