@@ -75,7 +75,7 @@
                     <div class="well well-sm">
                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 保存</button>
                     </div>
-                        </form>
+                </form>
         </div>
     </div>
 </div>
