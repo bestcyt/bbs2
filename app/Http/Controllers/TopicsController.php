@@ -40,6 +40,7 @@ class TopicsController extends Controller
         $topic->fill($request->all());
         $topic->user_id = Auth::id();
         $topic->save();
+
 		return redirect()->to($topic->link())->with('success', '创建成功');
 	}
 
