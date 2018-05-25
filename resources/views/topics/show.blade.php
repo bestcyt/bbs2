@@ -31,7 +31,6 @@
 
                 <div class="article-meta text-center">
                     {{ $topic->created_at->diffForHumans() }}
-                    ⋅
                     <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                     {{ $topic->reply_count }}
                 </div>
@@ -54,6 +53,13 @@
                         </button>
                     </form>
                 </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default topic-reply">
+            <div class="panel-body">
+                @include('topics._reply_box', ['topic' => $topic])
+                @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
             </div>
         </div>
     </div>
