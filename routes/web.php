@@ -42,6 +42,8 @@ Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show
 
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
+//回复资源路由
+Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
 //上传图片
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 
