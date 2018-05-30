@@ -8833,6 +8833,20 @@ body {
   color: #b3b3b3;
 }
 
+/* Notifications badge */
+
+.notifications-badge {
+  margin-top: -1;
+}
+
+.notifications-badge .badge-fade {
+  background-color: #EBE8E8;
+}
+
+.notifications-badge .badge-hint {
+  background-color: #d15b47 !important;
+}
+
 .navbar-static-top {
   border-color: #e7e7e7;
   background-color: #fff;
@@ -8858,6 +8872,15 @@ body {
 
 .users-show-page .user-info .thumbnail {
   margin-bottom: 0px;
+}
+
+.users-show-page .user-info .meta {
+  font-size: .9em;
+  color: #b3b3b3;
+}
+
+.users-show-page .user-info .reply-content {
+  margin: 6px 0;
 }
 
 .users-show-page .nav-tabs {

@@ -46,6 +46,20 @@ body {
     color: #b3b3b3;
   }
 }
+/* Notifications badge */
+
+.notifications-badge {
+  margin-top: -1;
+
+  .badge-fade {
+    background-color: #EBE8E8;
+  }
+
+  .badge-hint {
+    background-color: #d15b47 !important;;
+  }
+}
+
 
 .navbar-static-top {
   border-color: #e7e7e7;
