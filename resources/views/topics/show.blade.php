@@ -44,6 +44,7 @@
                     <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-default btn-xs" role="button">
                         <i class="glyphicon glyphicon-edit"></i> 编辑
                     </a>
+                    @can('destroy',$topic)
                     <form action="{{ route('topics.destroy', $topic->id) }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
@@ -52,6 +53,7 @@
                             删除
                         </button>
                     </form>
+                        @endcan
                 </div>
             </div>
         </div>
