@@ -15,6 +15,26 @@ class User extends Authenticatable
         notify as protected laravelNotify;
     }
 
+    //后台修改密码 加密赋值
+    public function setPasswordAttribute($value){
+        if (strlen($value) != 60){
+            $value = bcrypt($value);
+        }
+
+        $this->attributes['password'] = $value;
+    }
+
+    //后台修改头像，判断是否有http前缀
+    public function setAvatarAttribute($path)
+    {
+        if (!starts_with($path,'http')){
+            //拼接完整url
+            $path = config('app_url') . "/uploads/images/avatars/$path";
+        }
+
+        $this->attributes['avatar'] = $path;
+    }
+
     public function notify($instance){
         //如果通知的人是当前用户，就不必通知
         if ($this->id == Auth::id()){
