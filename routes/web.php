@@ -50,3 +50,4 @@ Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]
 //上传图片
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
