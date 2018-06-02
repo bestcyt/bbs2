@@ -11,7 +11,8 @@ class PagesController extends Controller
     public function root()
     {
         $test = User::where('id',1)->first()->toArray();
-        return view('pages.root');
+
+        return redirect()->route('topics.index');
     }
 
     public function permissionDenied()
