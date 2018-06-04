@@ -8809,6 +8809,23 @@ body {
   font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
 }
 
+/* Sidebar */
+
+.sidebar .panel-body {
+  padding: 12px;
+}
+
+.sidebar hr {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar .active-users a.media {
+  color: #797878;
+  line-height: 26px;
+  font-size: 0.9em;
+}
+
 .topics-show-page .panel {
   padding: 15px;
 }
